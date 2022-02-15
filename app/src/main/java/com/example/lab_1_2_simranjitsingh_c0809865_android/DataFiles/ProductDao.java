@@ -1,4 +1,4 @@
-package com.example.lab_1_2_simranjitsingh_c0809865_android.data;
+package com.example.lab_1_2_simranjitsingh_c0809865_android.DataFiles;
 
 
 import androidx.lifecycle.LiveData;
@@ -7,7 +7,7 @@ import androidx.room.Insert;
 import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
 
-import com.example.lab_1_2_simranjitsingh_c0809865_android.model.Product;
+import com.example.lab_1_2_simranjitsingh_c0809865_android.Models.Product;
 
 import java.util.List;
 

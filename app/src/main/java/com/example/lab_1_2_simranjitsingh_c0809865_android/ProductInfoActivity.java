@@ -10,10 +10,10 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.example.lab_1_2_simranjitsingh_c0809865_android.model.ProductViewModel;
+import com.example.lab_1_2_simranjitsingh_c0809865_android.Models.ProductViewModel;
 
 import com.example.lab_1_2_simranjitsingh_c0809865_android.databinding.ActivityProductInfoBinding;
-import com.example.lab_1_2_simranjitsingh_c0809865_android.model.Product;
+import com.example.lab_1_2_simranjitsingh_c0809865_android.Models.Product;
 
 
 public class ProductInfoActivity extends AppCompatActivity {
@@ -65,9 +65,9 @@ public class ProductInfoActivity extends AppCompatActivity {
          });
 
         binding.btnGetLocation.setVisibility(View.GONE);
-        binding.btnAddProduct.setText("Update");
+        binding.AddProductButton.setText("Update");
 
-        binding.btnAddProduct.setOnClickListener(new View.OnClickListener() {
+        binding.AddProductButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if(binding.etPname.getText().toString().isEmpty()){
@@ -83,7 +83,7 @@ public class ProductInfoActivity extends AppCompatActivity {
 
                     productViewModel.update(id,binding.etPname.getText().toString(),binding.etPdesc.getText().toString(),Double.valueOf(binding.etPprice.getText().toString()),
                             Double.valueOf(binding.etLat.getText().toString()),Double.valueOf(binding.etLon.getText().toString()));
-                    startActivity(new Intent(ProductInfoActivity.this, com.example.lab_1_2_simranjitsingh_c0809865_android.ProductListActivity.class));
+                    startActivity(new Intent(ProductInfoActivity.this, ProductListActivity.class));
                     finish();
                 }
             }
@@ -112,14 +112,12 @@ public class ProductInfoActivity extends AppCompatActivity {
 
         productViewModel.getFirstProduct().observe(this, products -> {
             if (products.size() != 0) {
-
-
                 binding.etPname.setEnabled(false);
                 binding.etPdesc.setEnabled(false);
                 binding.etPprice.setEnabled(false);
                 binding.etLat.setEnabled(false);
                 binding.etLon.setEnabled(false);
-                binding.btnAddProduct.setVisibility(View.GONE);
+                binding.AddProductButton.setVisibility(View.GONE);
                 binding.etPname.setText(products.get(0).getProductName());
                 binding.etPdesc.setText(products.get(0).getProductDesc());
                 binding.etPprice.setText(""+products.get(0).getProductPrice());
@@ -131,18 +129,16 @@ public class ProductInfoActivity extends AppCompatActivity {
         });
     }
 
-
-
     private void addDemoProducts() {
 
-        Product product = new Product();
-        product.setProductName("Hotdog");
-        product.setProductDesc("Hotdog is a popular fast food item, most popular in America. It is similar to a burger in concept with a longer bun and a sausage for filling.");
-        product.setProductPrice(8.00);
-        product.setProviderLat(85.457895621478953);
-        product.setProviderLong(85.487615793487956);
+        Product product0 = new Product();
+        product0.setProductName("Hotdog");
+        product0.setProductDesc("Hotdog is a popular fast food item, most popular in America. It is similar to a burger in concept with a longer bun and a sausage for filling.");
+        product0.setProductPrice(8.00);
+        product0.setProviderLat(85.457895621478953);
+        product0.setProviderLong(85.487615793487956);
 
-        productViewModel.insert(product);
+        productViewModel.insert(product0);
 
         Product product1 = new Product();
         product1.setProductName("Spaghetti");
@@ -231,7 +227,6 @@ public class ProductInfoActivity extends AppCompatActivity {
         product9.setProviderLong(85.487615793487956);
 
         productViewModel.insert(product9);
-
 
     }
 }

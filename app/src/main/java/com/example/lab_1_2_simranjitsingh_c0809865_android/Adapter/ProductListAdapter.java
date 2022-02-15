@@ -1,4 +1,4 @@
-package com.example.lab_1_2_simranjitsingh_c0809865_android.adapter;
+package com.example.lab_1_2_simranjitsingh_c0809865_android.Adapter;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -15,8 +15,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.lab_1_2_simranjitsingh_c0809865_android.ProductInfoActivity;
 import com.example.lab_1_2_simranjitsingh_c0809865_android.R;
 import com.example.lab_1_2_simranjitsingh_c0809865_android.databinding.ActivityProductListBinding;
-import com.example.lab_1_2_simranjitsingh_c0809865_android.model.Product;
-import com.example.lab_1_2_simranjitsingh_c0809865_android.model.ProductViewModel;
+import com.example.lab_1_2_simranjitsingh_c0809865_android.Models.Product;
+import com.example.lab_1_2_simranjitsingh_c0809865_android.Models.ProductViewModel;
 
 import java.util.ArrayList;
 

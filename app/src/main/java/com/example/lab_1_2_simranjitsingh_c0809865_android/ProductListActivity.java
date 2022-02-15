@@ -7,10 +7,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
-import com.example.lab_1_2_simranjitsingh_c0809865_android.adapter.ProductListAdapter;
+import com.example.lab_1_2_simranjitsingh_c0809865_android.Adapter.ProductListAdapter;
 import com.example.lab_1_2_simranjitsingh_c0809865_android.databinding.ActivityProductListBinding;
-import com.example.lab_1_2_simranjitsingh_c0809865_android.model.Product;
-import com.example.lab_1_2_simranjitsingh_c0809865_android.model.ProductViewModel;
+import com.example.lab_1_2_simranjitsingh_c0809865_android.Models.Product;
+import com.example.lab_1_2_simranjitsingh_c0809865_android.Models.ProductViewModel;
 
 import java.util.ArrayList;
 

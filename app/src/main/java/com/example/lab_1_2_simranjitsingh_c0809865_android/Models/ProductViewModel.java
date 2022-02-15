@@ -1,4 +1,4 @@
-package com.example.lab_1_2_simranjitsingh_c0809865_android.model;
+package com.example.lab_1_2_simranjitsingh_c0809865_android.Models;
 
 import android.app.Application;
 
@@ -6,7 +6,7 @@ import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 
-import com.example.lab_1_2_simranjitsingh_c0809865_android.data.ProductRepository;
+import com.example.lab_1_2_simranjitsingh_c0809865_android.DataFiles.ProductRepository;
 
 import java.util.List;
 

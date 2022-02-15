@@ -1,4 +1,4 @@
-package com.example.lab_1_2_simranjitsingh_c0809865_android.db;
+package com.example.lab_1_2_simranjitsingh_c0809865_android.Database;
 
 import android.content.Context;
 
@@ -8,8 +8,8 @@ import androidx.room.Room;
 import androidx.room.RoomDatabase;
 import androidx.sqlite.db.SupportSQLiteDatabase;
 
-import com.example.lab_1_2_simranjitsingh_c0809865_android.data.ProductDao;
-import com.example.lab_1_2_simranjitsingh_c0809865_android.model.Product;
+import com.example.lab_1_2_simranjitsingh_c0809865_android.DataFiles.ProductDao;
+import com.example.lab_1_2_simranjitsingh_c0809865_android.Models.Product;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
